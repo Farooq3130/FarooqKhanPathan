@@ -52,7 +52,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6">
             <a 
-              href="https://github.com/farooqkhanpathan" 
+              href="https://github.com/Farooq3130" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card hover:bg-card/80 transition-colors group"
@@ -60,7 +60,7 @@ const Hero = () => {
               <Github className="h-6 w-6 group-hover:scale-110 transition-transform" />
             </a>
             <a 
-              href="https://www.linkedin.com/in/farooq-khan" 
+              href="https://www.linkedin.com/in/farooq-khan-pathan/"
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card hover:bg-card/80 transition-colors group"
