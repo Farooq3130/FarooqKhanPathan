@@ -37,15 +37,11 @@ const Hero = () => {
             Passionate about building intelligent systems that improve efficiency and user experience.
           </p>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          {/* Action Button */}
+          <div className="flex justify-center items-center mb-12">
             <Button variant="hero" size="lg" className="group">
               <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
               Contact Me
-            </Button>
-            <Button variant="outline" size="lg" className="group">
-              <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-              Download Resume
             </Button>
           </div>
 
@@ -76,12 +72,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
-          </div>
-        </div>
       </div>
     </section>
   );

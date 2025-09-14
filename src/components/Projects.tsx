@@ -73,13 +73,13 @@ const Projects = () => {
             const isEven = index % 2 === 0;
             
             return (
-              <Card key={index} className={`card-hover overflow-hidden ${project.featured ? 'border-primary/50 glow' : ''}`}>
+              <Card key={index} className={`group card-hover overflow-hidden ${project.featured ? 'border-primary/50 glow' : ''} transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10`}>
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${!isEven ? 'lg:grid-cols-2' : ''}`}>
                   {/* Content */}
-                  <div className={`p-8 ${!isEven ? 'lg:order-2' : ''}`}>
+                  <div className={`p-8 ${!isEven ? 'lg:order-2' : ''} transition-all duration-300 group-hover:translate-y-[-4px]`}>
                     <div className="flex items-center mb-4">
-                      <div className="p-2 rounded-lg bg-primary/10 mr-4">
-                        <IconComponent className="h-6 w-6 text-primary" />
+                      <div className="p-2 rounded-lg bg-primary/10 mr-4 transition-all duration-300 group-hover:bg-primary/20 group-hover:scale-110">
+                        <IconComponent className="h-6 w-6 text-primary transition-all duration-300 group-hover:rotate-12" />
                       </div>
                       {project.featured && (
                         <Badge variant="default" className="bg-gradient-primary">
@@ -127,12 +127,12 @@ const Projects = () => {
                       
                       {/* Action Buttons */}
                       <div className="flex flex-col sm:flex-row gap-3">
-                        <Button variant="hero" className="group">
-                          <ExternalLink className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+                        <Button variant="hero" className="group transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:translate-y-[-2px]">
+                          <ExternalLink className="mr-2 h-4 w-4 group-hover:scale-110 transition-all duration-300 group-hover:rotate-12" />
                           View Demo
                         </Button>
-                        <Button variant="outline" className="group">
-                          <Github className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+                        <Button variant="outline" className="group transition-all duration-300 hover:bg-primary/5 hover:border-primary/50 hover:translate-y-[-2px]">
+                          <Github className="mr-2 h-4 w-4 group-hover:scale-110 transition-all duration-300 group-hover:rotate-12" />
                           View Code
                         </Button>
                       </div>
@@ -140,10 +140,10 @@ const Projects = () => {
                   </div>
                   
                   {/* Visual/Placeholder */}
-                  <div className={`bg-gradient-secondary p-8 flex items-center justify-center min-h-[300px] ${!isEven ? 'lg:order-1' : ''}`}>
-                    <div className="text-center">
-                      <IconComponent className="h-24 w-24 text-primary/30 mx-auto mb-4" />
-                      <p className="text-muted-foreground">Project Demo Coming Soon</p>
+                  <div className={`bg-gradient-secondary p-8 flex items-center justify-center min-h-[300px] ${!isEven ? 'lg:order-1' : ''} transition-all duration-500 group-hover:bg-gradient-primary/10`}>
+                    <div className="text-center transition-all duration-500 group-hover:scale-110">
+                      <IconComponent className="h-24 w-24 text-primary/30 mx-auto mb-4 transition-all duration-500 group-hover:text-primary/50 group-hover:scale-125 group-hover:rotate-6" />
+                      <p className="text-muted-foreground transition-all duration-300 group-hover:text-primary/70">Project Demo Coming Soon</p>
                     </div>
                   </div>
                 </div>
@@ -159,18 +159,18 @@ const Projects = () => {
             {additionalProjects.map((project, index) => {
               const IconComponent = project.icon;
               return (
-                <Card key={index} className="card-hover">
-                  <CardHeader>
+                <Card key={index} className="group card-hover transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/30">
+                  <CardHeader className="transition-all duration-300 group-hover:bg-primary/5">
                     <div className="flex items-center mb-2">
-                      <IconComponent className="h-5 w-5 text-primary mr-3" />
-                      <CardTitle className="text-lg">{project.title}</CardTitle>
+                      <IconComponent className="h-5 w-5 text-primary mr-3 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" />
+                      <CardTitle className="text-lg transition-all duration-300 group-hover:text-primary">{project.title}</CardTitle>
                     </div>
                     <CardDescription>{project.description}</CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="transition-all duration-300 group-hover:translate-y-[-2px]">
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
-                        <Badge key={techIndex} variant="outline" className="text-xs">
+                        <Badge key={techIndex} variant="outline" className="text-xs transition-all duration-300 hover:bg-primary/10 hover:border-primary/50 hover:scale-105">
                           {tech}
                         </Badge>
                       ))}
