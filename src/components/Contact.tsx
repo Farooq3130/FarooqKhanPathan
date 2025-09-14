@@ -33,14 +33,14 @@ const Contact = () => {
       icon: Linkedin,
       label: "LinkedIn",
       value: "/in/farooq-khan",
-      link: "https://www.linkedin.com/in/farooq-khan",
+      link: "https://www.linkedin.com/in/farooq-khan-pthan",
       external: true
     },
     {
       icon: Github,
       label: "GitHub",
       value: "@farooqkhanpathan",
-      link: "https://github.com/farooqkhanpathan",
+      link: "https://github.com/farooq3130",
       external: true
     }
   ];
